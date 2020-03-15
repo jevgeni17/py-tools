@@ -1,18 +1,44 @@
 {% load static %}
 <!DOCTYPE html>
-
-<html class="no-js"> 
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html class="no-js"> <!--<![endif]-->
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="description" content="Navigator Responsive Multipurpose Bootstrap HTML5 Template">
   
   <meta name="author" content="Themefisher.com">
 
-  <title>py-tools</title>
+  <title>Navigator | Responsive Multipurpose Bootstrap HTML5 Template</title>
 
+<!-- Mobile Specific Meta
+  ================================================== -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'favicon.ico' %}" />
   <!-- bootstrap.min css -->
   <link rel="stylesheet" href="{% static 'plugins/bootstrap/bootstrap.min.css' %}">
+  <!-- Revo Slider CSS
+    ================================================== -->
+  <!-- RS5.0 Main Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="{% static 'plugins/revo-slider/css/settings.css' %}">
+  <!-- RS5.0 Layers and Navigation Styles -->
+  <link rel="stylesheet" type="text/css" href="{% static 'plugins/revo-slider/css/layers.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'plugins/revo-slider/css/navigation.css' %}">
+  <!-- REVOLUTION STYLE SHEETS -->
+  <link rel="stylesheet" type="text/css" href="{% static 'plugins/revo-slider/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'plugins/revo-slider/fonts/font-awesome/css/font-awesome.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'plugins/revo-slider/css/settings.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'plugins/revo-slider/css/layers.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'plugins/revo-slider/css/navigation.css' %}">
+  <!-- CSS
+  ================================================== -->
+  <!-- Themefisher Icon font -->
+  
+  <link rel="stylesheet" href="{% static 'plugins/slick-carousel/slick/slick-theme.css' %}">
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
@@ -20,58 +46,71 @@
 
 <body id="body">
 
-<section class="header navigation fixed-top">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <nav class="navbar navbar-expand-lg">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="{% static 'images/logo.png' %}" alt="logo">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="tf-ion-android-menu"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navigation">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item dropdown active">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">
-                                    Home
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="index.html">Homepage 1</a>
-                                    <a class="dropdown-item" href="index-2.html">Homepage 2</a>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="about.html">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="service.html">Service</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="portfolio.html">Portfolio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">
-                                    Pages
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="404.html">404 Page</a>
-                                </div>
+    <section class="header navigation fixed-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="{% static 'images/logo.png' %}" alt="logo">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="tf-ion-android-menu"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navigation">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item dropdown active">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        projects
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="price-checker">priceChecker</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="">About</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <section class="hero-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="video-player">
+                        <img class="img-fluid rounded w-100" src="{% static 'images/hero.png' %}" alt="">
+
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="block">
+                        <h2>
+                            “Talk is cheap. Show me the code.”</h2>
+                        <p>― Linus Torvalds</p>
+                        <ul class="list-inline wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".7s">
+                            <li class="list-inline-item">
+                                <a href="https://github.com/jevgeni17" target="_blank" class="btn btn-main">get in touch</a>		
+
                             </li>
                         </ul>
                     </div>
-                </nav>
+                </div>
             </div>
         </div>
+
     </div>
-</section
+</section>
+
+    <div class="footer-bottom">
+        <h5>Copyright 2020 | All rights reserved.</h5>
+      </div>
 
 </body>
 </html>
