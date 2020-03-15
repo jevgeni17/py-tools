@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html class="no-js"> 
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="description" content="Navigator Responsive Multipurpose Bootstrap HTML5 Template">
+  
+  <meta name="author" content="Themefisher.com">
+
+  <title>price-checker</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- bootstrap.min css -->
+  <link rel="stylesheet" href="{% static 'plugins/bootstrap/bootstrap.min.css' %}">
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body id="body">
+
+    <section class="contact-us section bg-gray" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="title text-center">
+                        <h4>modern solution</h4>
+                        <h2>Find cheapest book.</h2>
+                        <span class="border"></span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum reiciendis quasi itaque, obcaecati atque sit!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Contact Details -->
+               
+                <!-- <input type="text" placeholder="Your Name" class="form-control" name="name" id="name">	  -->
+                
+                <!-- Contact Form -->
+                <div class="contact-form col-md-12 justify-content-center ">
+                    <form id="contact-form" method="post" action="" role="form" novalidate="novalidate">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            {{ form.name }}
+                        </div>
+                        
+                        <div id="cf-submit">
+                            <input type="submit" id="contact-submit" class="btn btn-transparent" value="Submit">
+                        </div>						
+                        
+                    </form>
+                </div>
+                <!-- ./End Contact Form -->
+            </div> <!-- end row -->
+            <div class="row">
+
+                <div class="col-md-12 justify-content-center">
+                    <div class="phone-block contact-meta-block">
+                        <i class="tf-ion-ios-telephone"></i>
+                        <h4>Made by</h4>
+                        <a href="https://github.com/jevgeni17">@jevgeni17</a>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div> <!-- end container -->
+    </section>
+</body>
+</html>

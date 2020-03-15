@@ -599,7 +599,7 @@ a:focus, a:hover {
 }
 
 .hero-area {
-  padding: 150px 0;
+  padding: 280px 0;
   position: relative;
   display: flex;
   justify-content: center;
@@ -848,7 +848,7 @@ a:focus, a:hover {
 
 .contact-form .form-control {
   background-color: transparent;
-  border: 1px solid #dedede;
+  border: 1px solid #f0326b;
   box-shadow: none;
   height: 45px !important;
   color: #0c0c0c;
