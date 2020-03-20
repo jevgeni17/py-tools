@@ -66,6 +66,14 @@ def item_price(page,class1,secondClass=None): # returns list of prices for each 
     prices = [i.replace('€','') for i in prices] # delete unnecessary symbols
     return prices
 
+def clean_dict(dict1):
+    copy = dict1.copy()
+    for k, v in copy.items():    
+        if v == 'Out of stock':
+            del dict1[k]
+        elif v == 'This product is not available on e-store':
+            del dict1[k]
+    return dict1
 
 
     
@@ -74,7 +82,32 @@ def priceChecker(request):
     if request.method == 'POST':
         name = request.POST.get("name")
         user_keywords = name.split(" ") 
-        return HttpResponse(f"<a href={test1}>{test1}</a>")
+
+        rahvaraamat_url = createURL(user_keywords,links_list[0])
+        bookvoed_url = createURL(user_keywords,links_list[1])
+        mnogoknig_url = createURL(user_keywords,links_list[2])
+
+        rahvaraamat_links = item_url(rahvaraamat_url,'title', 'js-link-product')
+        bookvoed_links = item_url(bookvoed_url,'o-row', 'title')
+        mnogoknig_links = item_url(mnogoknig_url,'col-xs-8')
+
+        rahvaraamat_prices = item_price(rahvaraamat_url, 'meta', 'price')
+        bookvoed_prices = item_price(bookvoed_url, 'buy', 'span')
+        mnogoknig_prices = item_price(mnogoknig_url, 'price')
+
+        rahvaraamat_dict =  dict(zip(rahvaraamat_links, rahvaraamat_prices))
+        rahvaraamat_dict = clean_dict(rahvaraamat_dict)
+        bookvoed_dict =  dict(zip(bookvoed_links, bookvoed_prices))
+        mnogoknig_dict =  dict(zip(mnogoknig_links, mnogoknig_prices))
+
+        rahvaraamat_dict.update(bookvoed_dict)
+        rahvaraamat_dict.update(mnogoknig_dict)
+        converted_to_num = dict((k, float(v)) for k,v in rahvaraamat_dict.items())
+        lowest_price_url = min(converted_to_num, key=converted_to_num.get)
+
+        
+
+        return render(request, "priceChecker.html", {'lowest_price_url': lowest_price_url})
     else:
         userform = UserForm()
         return render(request, "priceChecker.html",{"form": userform})

@@ -32,6 +32,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="row">
                 <!-- Contact Details -->
                
@@ -43,6 +44,7 @@
                         {% csrf_token %}
                         <div class="form-group">
                             {{ form.name }}
+                            
                         </div>
                         
                         <div id="cf-submit">
@@ -53,6 +55,9 @@
                 </div>
                 <!-- ./End Contact Form -->
             </div> <!-- end row -->
+            {% block content %}
+                <a href="{{lowest_price_url}}"> {{lowest_price_url}}</a>
+            {% endblock %}
             <div class="row">
 
                 <div class="col-md-12 justify-content-center">
