@@ -9,7 +9,7 @@ def createURL(keywordsList,urlExample): # returns a serach url with user keyword
     """ NOTICE!  white fang  - there is a book title example (which user will write in the form as a keyword)
         urlExample -             rahvaraamat.ee/search/productList/en?offset=0&limit=10&searchTerm={} - where {} there are search keywords
         function will return =>  rahvaraamat.ee/search/productList/en?offset=0&limit=10&searchTerm=мартин+иден  - instead of  {} will paste search keywords
-                                 bookvoed.ee/search?q={} =>  bookvoed.ee/search?q=white+fang
+                                 bookvoed.ee/search?q={}&count=50#page-1 =>  bookvoed.ee/search?q=white+fang
                                  mnogoknig.ee/search/{}  =>   mnogoknig.ee/search/white+fang
 
     """
