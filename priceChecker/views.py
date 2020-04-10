@@ -12,11 +12,11 @@ def priceChecker(request):
         name = request.POST.get("name")
         user_keywords = name.split(" ") 
 
-        rahvaraamat_url = createURL(user_keywords,links_list[0]) # def item_url(page,class1,secondClass=None)
+        rahvaraamat_url = createURL(user_keywords,links_list[0]) 
         bookvoed_url = createURL(user_keywords,links_list[1])
         mnogoknig_url = createURL(user_keywords,links_list[2])
 
-        rahvaraamat_links = item_url(rahvaraamat_url,'title', 'js-link-product')
+        rahvaraamat_links = item_url(rahvaraamat_url,'title', 'js-link-product') # def item_url(page,class1,secondClass=None)
         bookvoed_links = item_url(bookvoed_url,'o-row', 'title')
         mnogoknig_links = item_url(mnogoknig_url,'col-xs-8')
 
